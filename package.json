@@ -1,0 +1,35 @@
+{
+    "name": "@nonnajs/sample-deno-http",
+    "version": "1.0.0",
+    "description": "Deno HTTP server sample using @nonnajs/di and Hono",
+    "author": "Manuel Santos <ney.br.santos@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "keywords": [
+        "nonna",
+        "di",
+        "injector",
+        "deno",
+        "http",
+        "hono",
+        "sample"
+    ],
+    "main": "src/main.ts",
+    "types": "src/main.ts",
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json",
+        "clean:build": "rimraf ./dist",
+        "lint": "eslint . --ext .js,.ts",
+        "lint:fix": "pnpm lint --fix",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "test": "node --test --test-reporter node-test-reporter --require ts-node/register test/**/*.{test,it.test}.ts",
+        "test:deno": "deno test --allow-all --unstable-sloppy-imports test/",
+        "tsc": "tsc",
+        "start": "deno run --allow-all --unstable-sloppy-imports src/main.ts"
+    },
+    "dependencies": {
+        "@nonnajs/di": "workspace:*",
+        "hono": "^4.13.5"
+    }
+}

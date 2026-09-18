@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "imports": {
+        "@nonnajs/di": "../../di/src/index.ts",
+        "hono": "npm:hono@^4.13.5"
+    },
+    "tasks": {
+        "start": "deno run --allow-all --unstable-sloppy-imports src/main.ts",
+        "test": "deno test --allow-all --unstable-sloppy-imports test/"
+    }
+}
